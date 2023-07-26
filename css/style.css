@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*{  
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'VT323', sans-serif;
+    background: url('../assets/img/bg.png');
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.hero__container{
+    margin:2rem;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.hero__content{
+    width: 90%;
+    max-width: 1200px;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+}
+
+.hero__title{
+    font-size:10rem
+}
+
+.hero__subheading{
+    font-size: 5rem;
+}
+
+.hero__paragraph{
+    margin: 2rem auto 4rem;
+    font-size: 3rem;
+    width: 40%;
+}
+
+
+.main__img{
+    margin: 0 10rem;
+    top: 1;
+    transform: rotate(0deg) translate(0, -18%);
+    animation-name: Falling;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    width: 25%;
+}
+
+.btn{
+    width:10vw;
+    min-width: 30%;
+    height: 60px;
+    text-transform: uppercase;    
+    border-radius: 30px;
+    margin-top:10px;
+    cursor: pointer;
+    transition: .3s;
+    background-color:#fff;
+    color: #000;
+    border: 2px solid black;
+    font-size: 1vw;
+    display: block;
+    margin: 1rem auto;
+    font-size: 1rem;  
+}
+
+.btn:hover{
+    background-color: #000;
+    color:#fff;
+}
+    
+@keyframes Falling{
+    0%{
+        transform: rotate(0deg) translate(0, -15%);
+    }
+    100%{
+        transform: rotate(10deg) translate(0, -18%);
+    }
+}
+
+@media (min-width: 375px){
+  .main__img{
+    margin: 0 1rem;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1280px){
+    .hero__content{
+        max-width: none;
+        width: max-content;
+        text-align: left;
+        
+    }
+
+    .hero__paragraph{
+        margin: 0;
+        max-width: 30%;
+    }
+    
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        max-width: 40%;
+    }
+
+    .main__img{
+        width: 30%;
+    }
+  }
+
